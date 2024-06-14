@@ -1,0 +1,291 @@
+<!-- 1. layouts, heeader,index.jsx
+
+import { NavLink } from "react-router-dom";
+import "./index.scss";
+import { CiSearch } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
+import { CiHeart } from "react-icons/ci";
+
+const Header = () => {
+  return (
+    <header>
+      <div className="container">
+        <div className="header">
+          <img
+            src="https://preview.colorlib.com/theme/timezone/assets/img/logo/logo.png"
+            alt="logo"
+            className="logo"
+          />
+          <nav>
+            <ul>
+              <li>
+                <NavLink to={"/"}>Home</NavLink>
+              </li>
+              <li>
+                <NavLink>Shop</NavLink>
+              </li>
+              <li>
+                <NavLink>About</NavLink>
+              </li>
+              <li>
+                <NavLink>Latest</NavLink>
+              </li>
+              <li>
+                <NavLink>Blog</NavLink>
+              </li>
+              <li>
+                <NavLink>Pages</NavLink>
+              </li>
+              <li>
+                <NavLink>Contact</NavLink>
+              </li>
+            </ul>
+          </nav>
+          <div className="icons">
+            <CiSearch />
+            <CiHeart />
+            <CiShoppingCart />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header; -->
+
+
+
+
+
+
+<!-- 2.layouts,header, index.scss
+
+header {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3rem 0;
+      background-color: #fff;
+      nav {
+        ul {
+          display: flex;
+          gap: 2rem;
+          li {
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+  
+      .icons {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+  } -->
+
+
+  
+  
+  
+  
+  <!-- 3.pages,homepages,index.jsx 
+
+  import "./index.scss";
+import { Card, Col, Row } from "antd";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { CiHeart } from "react-icons/ci";
+import { CiShoppingBasket } from "react-icons/ci";
+
+const { Meta } = Card;
+const HomePage = () => {
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Watch Shop | Ecommerce</title>
+      </Helmet>
+      <div id="home-page">
+        <div className="home-page">
+          <section id="banner">
+            <div className="banner">
+              <div className="container">
+                <div className="content">
+                  <h1>Select Your New Perfect Style</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore corporis placeat reiciendis magnam dolorum ipsam,
+                    excepturi aliquam laudantium cum aperiam! Laudantium ullam
+                    quas, officia sapiente doloribus vel et nisi soluta.
+                  </p>
+                  <button className="show">Shop Now</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default HomePage; -->
+
+
+
+
+
+
+
+<!-- 4.pages, homepages, index.scss
+
+#home-page {
+    .home-page {
+      #banner {
+        background-image: url("https://preview.colorlib.com/theme/timezone/assets/img/hero/watch.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding: 13rem 0;
+  
+        .banner {
+          .content {
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+  
+            h1 {
+              font-size: 96px;
+              font-weight: bold;
+            }
+            p {
+              font-size: 17px;
+            }
+            .show {
+              padding: 10px 20px;
+              background-color: #212025;
+              color: #fff;
+              border: none;
+            }
+          }
+        }
+      }
+      #popular-items {
+        padding: 13rem 0;
+        .popular-items {
+          h2 {
+            text-align: center;
+            font-size: 2rem;
+          }
+          p {
+            text-align: center;
+            margin: 2rem;
+          }
+        }
+      }
+    }
+  } -->
+
+
+ 
+ 
+ 
+  <!-- 5.pages, notfoundpages, index.jsx
+
+  const NotFoundPage = () => {
+    return <div>NotFoundPage</div>;
+  };
+  
+  export default NotFoundPage; -->
+
+
+
+
+
+
+  <!-- 6. app.jsx 
+
+  import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import Header from "./layouts/Header";
+import Footer from "./layouts/Footer";
+function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
+export default App; -->
+
+
+
+
+<!-- 7. index.css 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 1199px) {
+    .container {
+      padding: 0 5%;
+    }
+  } -->
+
+
+
+  <!-- 8. main.jsx 
+
+  import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+); -->
+
+
+
+<!-- 9.index.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> -->
